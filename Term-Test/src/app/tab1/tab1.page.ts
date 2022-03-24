@@ -28,15 +28,7 @@ export class Tab1Page {
     })
   }
 
-  testClick() {
-    console.log("test button clicked");
-    const data = {
-      first: "name",
-      star: 2,
-      testThird: "third"
-    }
-    this.fs.addDataService("NewCollection", data);
-  }
+ 
 }
 
 
