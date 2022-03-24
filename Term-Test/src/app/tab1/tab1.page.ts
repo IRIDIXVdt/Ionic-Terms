@@ -19,8 +19,8 @@ export class Tab1Page {
         e => {
           return {
             id: e.payload.doc.id,
-            age: e.payload.doc.data()['age'],
-            gender: e.payload.doc.data()['gender'],
+            age: e.payload.doc.data()['Age'],
+            gender: e.payload.doc.data()['Gender'],
           }
         })
         console.log('e loaded!', this.loadedData);
