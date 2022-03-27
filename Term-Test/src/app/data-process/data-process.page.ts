@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseServiceService } from '../service/firebase-service.service';
-
+import { randomTermData } from '../../assets/sharedData/randomData';
 @Component({
   selector: 'app-data-process',
   templateUrl: './data-process.page.html',
   styleUrls: ['./data-process.page.scss'],
 })
 export class DataProcessPage implements OnInit {
-
-  constructor(private fs: FirebaseServiceService) { }
+  termData: any;
+  constructor(private fs: FirebaseServiceService) {
+    this.termData = randomTermData;
+    console.log(this.termData);
+  }
 
   ngOnInit() {
   }
@@ -23,5 +26,5 @@ export class DataProcessPage implements OnInit {
     this.fs.addDataService("NewCollection", data);
   }
 
-  
+
 }
