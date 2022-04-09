@@ -1,5 +1,5 @@
 import os
-
+import random
 
 print(os.listdir())
 with open('Term Selection/powerPreProcessedText.txt') as f:
@@ -22,7 +22,7 @@ for lineItem in lines:
         termItem = lineItem
     else:
         termItem += lineItem
-        
+
 resultArray.append(termItem)
 resultArray.pop(0)
 
@@ -32,5 +32,10 @@ print(term)
 print(len(resultArray))
 print(resultArray[0])
 
+random.shuffle(resultArray)
+print(resultArray)
 
 
+with open("Term Selection/out.txt",'w') as txt_file:
+    for line in resultArray:
+        txt_file.write(line + "\n")
